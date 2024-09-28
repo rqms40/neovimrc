@@ -27,4 +27,5 @@ require("lazy").setup({
 	require("plugins.comment"),
 	require("plugins.vimbegood"),
 	require("plugins.harpoon"),
+	require("plugins.undotree"),
 })
