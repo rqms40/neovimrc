@@ -11,6 +11,9 @@ return {
 	{
 		-- Powerful Git integration for Vim
 		"tpope/vim-fugitive",
+		config = function()
+			vim.keymap.set("n", "<leader>gs", vim.cmd.Git)
+		end,
 	},
 	{
 		-- GitHub integration for vim-fugitive
