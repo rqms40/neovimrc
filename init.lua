@@ -28,4 +28,5 @@ require("lazy").setup({
 	require("plugins.vimbegood"),
 	require("plugins.harpoon"),
 	require("plugins.undotree"),
+	require("plugins.oil"),
 })
