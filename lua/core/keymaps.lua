@@ -2,7 +2,7 @@
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
--- vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
+vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 
 -- Disable the spacebar key's default behavior in Normal and Visual modes
 vim.keymap.set({ "n", "v" }, "<Space>", "<Nop>", { silent = true })
@@ -44,7 +44,7 @@ vim.keymap.set("n", "<leader>b", "<cmd> enew <CR>", opts) -- new buffer
 
 -- Window management
 vim.keymap.set("n", "<leader>v", "<C-w>v", opts) -- split window vertically
-vim.keymap.set("n", "<leader>h", "<C-w>s", opts) -- split window horizontally
+vim.keymap.set("n", "<leader>xh", "<C-w>s", opts) -- split window horizontally
 vim.keymap.set("n", "<leader>se", "<C-w>=", opts) -- make split windows equal width & height
 vim.keymap.set("n", "<leader>xs", ":close<CR>", opts) -- close current split window
 

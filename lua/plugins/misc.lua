@@ -44,4 +44,8 @@ return {
 			require("colorizer").setup()
 		end,
 	},
+	{
+		"jwalton512/vim-blade",
+		ft = "blade", -- Lazy load for Blade file types
+	},
 }

@@ -29,4 +29,5 @@ require("lazy").setup({
 	require("plugins.harpoon"),
 	require("plugins.undotree"),
 	require("plugins.oil"),
+	require("plugins.trouble"),
 })
