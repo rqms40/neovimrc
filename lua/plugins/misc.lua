@@ -1,4 +1,4 @@
--- Standalone plugins with less than 10 lines of config go here
+-- Standalone plugins with light config
 return {
 	{
 		-- Tmux & split window navigation
@@ -9,10 +9,14 @@ return {
 		"tpope/vim-sleuth",
 	},
 	{
+		-- Close buffers without closing windows (:Bdelete)
+		"famiu/bufdelete.nvim",
+	},
+	{
 		-- Powerful Git integration for Vim
 		"tpope/vim-fugitive",
 		config = function()
-			vim.keymap.set("n", "<leader>gs", vim.cmd.Git)
+			vim.keymap.set("n", "<leader>gs", vim.cmd.Git, { desc = "Git status (fugitive)" })
 		end,
 	},
 	{
@@ -22,12 +26,15 @@ return {
 	{
 		-- Hints keybinds
 		"folke/which-key.nvim",
+		event = "VeryLazy",
+		opts = {
+			delay = 300,
+		},
 	},
 	{
 		-- Autoclose parentheses, brackets, quotes, etc.
 		"windwp/nvim-autopairs",
 		event = "InsertEnter",
-		config = true,
 		opts = {},
 	},
 	{
@@ -38,14 +45,24 @@ return {
 		opts = { signs = false },
 	},
 	{
-		-- High-performance color highlighter
-		"norcalli/nvim-colorizer.lua",
-		config = function()
-			require("colorizer").setup()
-		end,
+		-- High-performance color highlighter (maintained fork)
+		"catgoose/nvim-colorizer.lua",
+		event = { "BufReadPost", "BufNewFile" },
+		opts = {
+			filetypes = { "*" },
+			user_default_options = {
+				names = false,
+				rgb_fn = true,
+				hsl_fn = true,
+				css = true,
+				css_fn = true,
+				tailwind = false,
+				mode = "background",
+			},
+		},
 	},
 	{
 		"jwalton512/vim-blade",
-		ft = "blade", -- Lazy load for Blade file types
+		ft = "blade",
 	},
 }

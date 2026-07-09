@@ -1,4 +1,4 @@
--- Easily comment visual regions/lines
+-- Easily comment visual regions/lines (keybindings preserved)
 return {
 	"numToStr/Comment.nvim",
 	opts = {},
