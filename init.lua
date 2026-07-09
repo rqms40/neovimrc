@@ -41,6 +41,7 @@ require("lazy").setup({
 	require("plugins.undotree"),
 	require("plugins.oil"),
 	require("plugins.trouble"),
+	require("plugins.markdown"),
 }, {
 	ui = {
 		border = "rounded",
