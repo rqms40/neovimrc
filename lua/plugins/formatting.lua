@@ -43,6 +43,7 @@ return {
 			bash = { "shfmt" },
 			zsh = { "shfmt" },
 			go = { "gofmt" },
+			rust = { "rustfmt" },
 			terraform = { "terraform_fmt" },
 			tf = { "terraform_fmt" },
 			["*"] = {},

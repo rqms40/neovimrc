@@ -116,6 +116,15 @@ return {
 					},
 				},
 			},
+			rust_analyzer = {
+				settings = {
+					["rust-analyzer"] = {
+						cargo = { allFeatures = true },
+						check = { command = "clippy" },
+						procMacro = { enable = true },
+					},
+				},
+			},
 			bashls = {},
 			lua_ls = {
 				settings = {
@@ -177,12 +186,15 @@ return {
 			automatic_enable = true,
 		})
 
-		-- Enable PATH-installed tools (standalone ruff binary, system gopls, etc.)
+		-- Enable PATH-installed tools (standalone ruff binary, system gopls/rust-analyzer, etc.)
 		if vim.fn.executable("ruff") == 1 then
 			vim.lsp.enable("ruff")
 		end
 		if vim.fn.executable("gopls") == 1 then
 			vim.lsp.enable("gopls")
+		end
+		if vim.fn.executable("rust-analyzer") == 1 then
+			vim.lsp.enable("rust_analyzer")
 		end
 	end,
 }
